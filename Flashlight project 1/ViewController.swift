@@ -16,13 +16,16 @@ class ViewController: UIViewController {
         isOn = !isOn
         
         if isOn {
-            view.backgroundColor = UIColor.white
+            onlyButton.titleLabel?.text = "ON"
+            onlyButton.titleLabel?.backgroundColor = .black
+            onlyButton.titleLabel?.textColor = .white
             onlyButton.backgroundColor = .black
-            onlyButton.titleLabel?.backgroundColor = .white
-            
+            view.backgroundColor = UIColor.white
         } else {
+            onlyButton.titleLabel?.text = "OFF"
             view.backgroundColor = UIColor.black
             onlyButton.backgroundColor = .white
+             onlyButton.titleLabel?.backgroundColor = .white
             onlyButton.titleLabel?.textColor = .black
         }
         

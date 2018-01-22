@@ -20,7 +20,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0d-YM-fHG">
                                 <rect key="frame" x="138" y="567" width="109" height="30"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="onoffButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWT-u1-w6L"/>
                                 </connections>
