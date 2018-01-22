@@ -9,24 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var isOn: Bool = true
     @IBOutlet weak var onlyButton: UIButton!
     @IBAction func onoffButtonPressed(_ sender: Any) {
         isOn = !isOn
         
         if isOn {
-            onlyButton.titleLabel?.text = "ON"
-            onlyButton.titleLabel?.backgroundColor = .black
-            onlyButton.titleLabel?.textColor = .white
+            // onlyButton.titleLabel?.backgroundColor = .black
+            onlyButton.setTitle("ON", for: .normal)
+            onlyButton.setTitleColor(.white, for: .normal)
             onlyButton.backgroundColor = .black
             view.backgroundColor = UIColor.white
+            
+            
         } else {
-            onlyButton.titleLabel?.text = "OFF"
+            onlyButton.setTitle("OFF", for: .normal)
+             onlyButton.setTitleColor(.black, for: .normal)
             view.backgroundColor = UIColor.black
             onlyButton.backgroundColor = .white
-             onlyButton.titleLabel?.backgroundColor = .white
-            onlyButton.titleLabel?.textColor = .black
+           
+            
         }
         
     }
@@ -35,6 +38,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
 }
 

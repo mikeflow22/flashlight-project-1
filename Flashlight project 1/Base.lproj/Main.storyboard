@@ -20,6 +20,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0d-YM-fHG">
                                 <rect key="frame" x="138" y="567" width="109" height="30"/>
+                                <state key="normal" title="Press Me">
+                                    <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onoffButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWT-u1-w6L"/>
                                 </connections>
