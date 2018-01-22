@@ -7,37 +7,61 @@
 //
 
 import UIKit
+import SceneKit
 
 class ViewController: UIViewController {
     
-    var isOn: Bool = true
+    var isOn: Bool = false
     @IBOutlet weak var onlyButton: UIButton!
-    @IBAction func onoffButtonPressed(_ sender: Any) {
-        isOn = !isOn
-        
-        if isOn {
-            // onlyButton.titleLabel?.backgroundColor = .black
+    
+
+    @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
+  
             onlyButton.setTitle("ON", for: .normal)
             onlyButton.setTitleColor(.white, for: .normal)
             onlyButton.backgroundColor = .black
             view.backgroundColor = UIColor.white
-            
-            
-        } else {
-            onlyButton.setTitle("OFF", for: .normal)
-             onlyButton.setTitleColor(.black, for: .normal)
-            view.backgroundColor = UIColor.black
-            onlyButton.backgroundColor = .white
-           
-            
-        }
-        
     }
-    
+
+    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
+        onlyButton.setTitle("OFF", for: .normal)
+        onlyButton.setTitleColor(.black, for: .normal)
+        view.backgroundColor = UIColor.black
+        onlyButton.backgroundColor = .white
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+//    func tapGesture()   {
+//        isOn = !isOn
+//        if isOn {
+//            // onlyButton.titleLabel?.backgroundColor = .black
+//            onlyButton.setTitle("ON", for: .normal)
+//            onlyButton.setTitleColor(.white, for: .normal)
+//            onlyButton.backgroundColor = .black
+//            view.backgroundColor = UIColor.white
+//        } else {
+//            onlyButton.setTitle("OFF", for: .normal)
+//            onlyButton.setTitleColor(.black, for: .normal)
+//            view.backgroundColor = UIColor.black
+//            onlyButton.backgroundColor = .white
+//        }
+//    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
 

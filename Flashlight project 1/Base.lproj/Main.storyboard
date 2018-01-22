@@ -20,11 +20,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0d-YM-fHG">
                                 <rect key="frame" x="138" y="567" width="109" height="30"/>
-                                <state key="normal" title="Press Me">
+                                <gestureRecognizers/>
+                                <state key="normal" title="&lt;- Swipe -&gt;">
                                     <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onoffButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YWT-u1-w6L"/>
+                                    <outletCollection property="gestureRecognizers" destination="sO6-Kd-5U6" appends="YES" id="1L5-Ql-mKU"/>
+                                    <outletCollection property="gestureRecognizers" destination="2Gh-fc-g4M" appends="YES" id="sIA-Ki-4Lk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,6 +44,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="sO6-Kd-5U6" userLabel="Swipe Right Gesture Recognizer">
+                    <connections>
+                        <action selector="swipeRight:" destination="BYZ-38-t0r" id="nlt-nr-dfR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="2Gh-fc-g4M" userLabel="Swipe Left Gesture Recognizer">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BYZ-38-t0r" id="sjO-WP-edJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
